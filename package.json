@@ -1,0 +1,32 @@
+{
+  "name": "@release-it/mercurial",
+  "version": "0.0.0",
+  "description": "Mercurial plugin for release-it",
+  "main": "index.js",
+  "keywords": [
+    "release",
+    "release-it",
+    "release-it-plugin",
+    "plugin",
+    "mercurial"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/release-it/mercurial.git"
+  },
+  "homepage": "https://github.com/release-it/mercurial#readme",
+  "bugs": "https://github.com/release-it/mercurial/issues",
+  "author": {
+    "name": "Lars Kappert",
+    "email": "lars@webpro.nl",
+    "url": "https://webpro.nl"
+  },
+  "dependencies": {
+    "release-it": "*"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=8"
+  }
+}
