@@ -1,5 +1,5 @@
-const Plugin = require('release-it/lib/plugin');
-const { hasAccess, preview } = require('release-it/lib/util');
+const fs = require('fs');
+const { Plugin } = require('release-it');
 const prompts = require('./prompts');
 const { CleanWorkingDirError } = require('./errors');
 
@@ -24,7 +24,10 @@ class Mercurial extends Plugin {
   }
 
   static isEnabled() {
-    return hasAccess('.hg');
+    try {
+      fs.accessSync('.hg');
+      return true;
+    } catch (err) {}
   }
 
   async init() {
@@ -55,7 +58,7 @@ class Mercurial extends Plugin {
   async beforeRelease() {
     if (this.options.commit) {
       const changeSet = await this.status();
-      preview(this.log, { title: 'changeset', text: changeSet });
+      this.log.preview({ title: 'changeset', text: changeSet });
     }
   }
 
