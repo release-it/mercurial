@@ -23,7 +23,7 @@
     "url": "https://webpro.nl"
   },
   "dependencies": {
-    "release-it": "*"
+    "release-it": "^11.0.0-alpha.4"
   },
   "devDependencies": {},
   "engines": {
